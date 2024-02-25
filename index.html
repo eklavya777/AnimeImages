@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <link rel="stylesheet" type="text/css" href="html.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Image Gallery</title>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+  var imageArray = [
+    "https://th.bing.com/th/id/R.3815a42b46da671611ad9dc297dfab4f?rik=ax0WLPlPK%2bv6vg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f05%2fCool-Anime-Backgrounds-HD.jpg&ehk=%2fLKmbsapb8mtCKRIDZ44jpBBd7lT3%2bl0KWQgyymY%2bHk%3d&risl=&pid=ImgRaw&r=0",
+    "https://wallpapercave.com/wp/76xAu3H.jpg",
+    "https://images.alphacoders.com/634/634011.jpg",
+    "https://www.themoviedb.org/t/p/original/4VA1G9HVBh3GVKcgjVdnLrf52aO.jpg",
+    "https://i.pinimg.com/originals/83/7c/6b/837c6bbef60cfe47e85ac801a4057014.jpg",
+    "https://www.themoviedb.org/t/p/original/4VA1G9HVBh3GVKcgjVdnLrf52aO.jpg",
+    "https://th.bing.com/th/id/R.3815a42b46da671611ad9dc297dfab4f?rik=ax0WLPlPK%2bv6vg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f05%2fCool-Anime-Backgrounds-HD.jpg&ehk=%2fLKmbsapb8mtCKRIDZ44jpBBd7lT3%2bl0KWQgyymY%2bHk%3d&risl=&pid=ImgRaw&r=0",
+    "https://wallpapercave.com/wp/76xAu3H.jpg",
+    "https://images.alphacoders.com/634/634011.jpg",
+    "https://www.themoviedb.org/t/p/original/4VA1G9HVBh3GVKcgjVdnLrf52aO.jpg",
+    "https://i.pinimg.com/originals/83/7c/6b/837c6bbef60cfe47e85ac801a4057014.jpg",
+    "https://www.themoviedb.org/t/p/original/4VA1G9HVBh3GVKcgjVdnLrf52aO.jpg",
+    "https://th.bing.com/th/id/R.3815a42b46da671611ad9dc297dfab4f?rik=ax0WLPlPK%2bv6vg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f05%2fCool-Anime-Backgrounds-HD.jpg&ehk=%2fLKmbsapb8mtCKRIDZ44jpBBd7lT3%2bl0KWQgyymY%2bHk%3d&risl=&pid=ImgRaw&r=0",
+    "https://wallpapercave.com/wp/76xAu3H.jpg",
+    "https://images.alphacoders.com/634/634011.jpg",
+    "https://www.themoviedb.org/t/p/original/4VA1G9HVBh3GVKcgjVdnLrf52aO.jpg",
+    "https://i.pinimg.com/originals/83/7c/6b/837c6bbef60cfe47e85ac801a4057014.jpg",
+    "https://www.themoviedb.org/t/p/original/4VA1G9HVBh3GVKcgjVdnLrf52aO.jpg",
+    "https://th.bing.com/th/id/R.3815a42b46da671611ad9dc297dfab4f?rik=ax0WLPlPK%2bv6vg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f05%2fCool-Anime-Backgrounds-HD.jpg&ehk=%2fLKmbsapb8mtCKRIDZ44jpBBd7lT3%2bl0KWQgyymY%2bHk%3d&risl=&pid=ImgRaw&r=0",
+    "https://wallpapercave.com/wp/76xAu3H.jpg",
+    "https://images.alphacoders.com/634/634011.jpg",
+    "https://www.themoviedb.org/t/p/original/4VA1G9HVBh3GVKcgjVdnLrf52aO.jpg",
+    "https://i.pinimg.com/originals/83/7c/6b/837c6bbef60cfe47e85ac801a4057014.jpg",
+    "https://www.themoviedb.org/t/p/original/4VA1G9HVBh3GVKcgjVdnLrf52aO.jpg",
+   
+  ];
+
+  function ImageGallery() {
+    return (
+      <div className="image-gallery">
+        
+        {imageArray.map((imageUrl, index) => (
+          <img
+            key={index}
+            src={imageUrl}
+            alt={`Image ${index + 1}`}
+            loading="lazy"
+            className="gallery-image"
+          />
+        ))}
+      </div>
+    );
+  }
+  ReactDOM.render(
+    <div>
+      <h2>Anime images</h2>
+      <ImageGallery />
+    </div>,
+    document.getElementById('root')
+  );
+
+</script>
+
+</body>
+</html>
+
